@@ -14,7 +14,7 @@ const app = express();
 
 const PORT = 3300;
 
-const EmployeeController = require('./Controllers/EmployeeController');
+const AssetController = require('./Controllers/AssetController');
 
 /**
  * App Middlewares
@@ -48,7 +48,7 @@ app.get('/robots.txt', (req, res) => {
 	res.send('User-agent: *\nDisallow: /');
 });
 
-new EmployeeController('/api/employee', app);
+new AssetController('/api/asset',app);
 
 //#region end
 
